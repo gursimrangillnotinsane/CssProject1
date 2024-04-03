@@ -1,20 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik&display=swap');
+
+:root {
+  --color-background: #91e39f;
+  --color-text: #00530f;
+  --color-text-secondary: rgb(36, 119, 72);
+  --color-light: #fff;
+  --color-anchor: #3a00ff;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: gainsboro;
+}
+
+p,
+h2,
+li {
+  color: black;
+}
+
 body::before {
   content: "";
-  /* https://www.pexels.com/photo/white-painted-wall-1939485/ */
-  background-image: url("pexels-henry-&-co-1939485.jpg");
-  background-repeat: no-repeat;
+  /* https://www.toptal.com/designers/subtlepatterns/uploads/leaves.png */
+  background-image: url("https://cdn.vectorstock.com/i/1000v/23/36/black-and-white-leaf-maple-seamless-pattern-vector-11372336.avif");
   position: absolute;
-  height: 100%;
   width: 100%;
+  height: 100%;
   background-size: cover;
   z-index: -1;
   filter: brightness(0.8)
 }
 
-body {
-  background-color: whitesmoke;
+nav {
+  margin-top: 3px;
 }
 
+
+header {
+  height: 100vh;
+  text-align: center;
+}
+
+
+h1 {
+  padding: 10%;
+  text-align: center;
+  color: var(--color-text);
+  font-family: Rosarivo, serif;
+  font-size: 9rem;
+  font-weight: 400;
+}
 
 
 article {
@@ -22,25 +73,28 @@ article {
 
 }
 
+
+h2 {
+  font-size: 3em;
+  margin: 3% 0;
+  font-family: Rubik;
+}
+
 p {
-  padding: 10px;
+  margin-top: 2%;
+  line-height: 1.5rem;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 600;
 }
-
-header {
-  height: 100vh;
-}
-
-
-h1 {
-  font-size: 6em;
-
-  padding: 10%;
-  text-align: center;
-}
-
 
 svg {
   width: 2%;
+}
+
+
+a {
+  text-decoration: none;
+
 }
 
 ul {
@@ -49,8 +103,90 @@ ul {
   flex-wrap: wrap;
 }
 
-li {
-  border: 1px green solid;
+ul li {
+
   margin: .3%;
   padding: 1%;
+  font-size: 1.5em;
+
+}
+
+nav ul li::before {
+  content: "🍃";
+  size: 2px;
+}
+
+nav ul li:hover {
+  animation-name: hover_li;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+
+@keyframes hover_li {
+  from {
+    background-color: white;
+  }
+
+  to {
+    background-color: #26ff00;
+  }
+}
+
+
+
+
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: -10000px;
+  font-size: 14px;
+  width: 1px;
+  height: 1px;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  padding: 0.3rem;
+}
+
+blockquote {
+  padding: 1.3%;
+  margin-top: 2%;
+  background-color: aliceblue;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+ol li {
+  background-color: antiquewhite;
+  padding: 2%;
+}
+
+#files a {
+  margin: 2%;
+  border: 2px solid black;
+}
+
+main li {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  background-color: #abaeac;
+}
+
+
+.container {
+  margin: 20px;
+}
+
+#contribute li {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background: skyblue;
+  margin: 3%;
 }
