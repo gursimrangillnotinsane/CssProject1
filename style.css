@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 
 :root {
   --color-background: #91e39f;
-  --color-text: #00530f;
+  --color-text: #000000;
   --color-text-secondary: rgb(36, 119, 72);
   --color-light: #fff;
   --color-anchor: #3a00ff;
@@ -26,7 +27,7 @@ html {
 }
 
 body {
-  background-color: gainsboro;
+  background-color: #d1d1cc;
 }
 
 p,
@@ -38,13 +39,13 @@ li {
 body::before {
   content: "";
   /* https://www.toptal.com/designers/subtlepatterns/uploads/leaves.png */
-  background-image: url("https://cdn.vectorstock.com/i/1000v/23/36/black-and-white-leaf-maple-seamless-pattern-vector-11372336.avif");
+  background-image: url("wallpaperflare.com_wallpaper\ \(6\).jpg");
   position: absolute;
   width: 100%;
   height: 100%;
   background-size: cover;
+  top: 0;
   z-index: -1;
-  filter: brightness(0.8)
 }
 
 nav {
@@ -55,16 +56,26 @@ nav {
 header {
   height: 100vh;
   text-align: center;
+  margin-right: 40%;
+}
+
+header p {
+  margin-bottom: 3%;
 }
 
 
+header .link-github {
+  background-color: #cfe5e0;
+  font-size: 2rem;
+}
+
 h1 {
   padding: 10%;
-  text-align: center;
-  color: var(--color-text);
-  font-family: Rosarivo, serif;
+  /* text-align: start; */
+  color: #005645;
+  font-family: "Source Serif 4", serif;
   font-size: 9rem;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 
@@ -76,25 +87,45 @@ article {
 
 h2 {
   font-size: 3em;
+  font-weight: 600;
   margin: 3% 0;
-  font-family: Rubik;
+  /* font-family: ; */
+  color: #ee1c25;
+  /* #bb0602 */
+}
+
+h3 {
+  font-size: 2rem;
+  margin-top: 2%;
+  color: #005645;
+  font-family: "Source Serif 4", serif;
+  font-weight: 600;
 }
 
 p {
   margin-top: 2%;
   line-height: 1.5rem;
-  font-family: "Roboto Mono", monospace;
-  font-weight: 600;
+  font-family: "Roboto Slab", serif;
 }
 
-svg {
-  width: 2%;
+strong {
+  font-weight: 800;
+}
+
+header svg {
+  width: 1.5rem;
 }
 
 
 a {
   text-decoration: none;
+  color: #005645;
+  font-weight: 600;
+}
 
+a:hover {
+  text-decoration: underline;
+  color: #016420
 }
 
 ul {
@@ -111,10 +142,15 @@ ul li {
 
 }
 
-nav ul li::before {
-  content: "🍃";
-  size: 2px;
+ul li img {
+  max-width: 100%;
+  /* Make images responsive within list items */
+  height: auto;
+  /* Maintain aspect ratio */
 }
+
+
+nav ul li::before {}
 
 nav ul li:hover {
   animation-name: hover_li;
@@ -157,11 +193,17 @@ nav ul li:hover {
 blockquote {
   padding: 1.3%;
   margin-top: 2%;
-  background-color: aliceblue;
+
+  background-color: #a8656f;
 }
 
 blockquote p {
   margin: 0;
+  color: white;
+}
+
+blockquote a {
+  color: rgb(91, 25, 96);
 }
 
 ol li {
@@ -169,15 +211,37 @@ ol li {
   padding: 2%;
 }
 
-#files a {
-  margin: 2%;
-  border: 2px solid black;
+#files {
+  width: 40%;
+}
+
+.profile {
+  position: relative;
+  float: right;
+  bottom: 83px;
+}
+
+#profile-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+
+.profile ul {
+  display: block;
+
+}
+
+.profile ul li {
+  font-size: 1.3rem;
 }
 
 main li {
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
-  background-color: #abaeac;
+  background-color: #bc955b;
+  font-weight: 600;
 }
 
 
@@ -186,7 +250,33 @@ main li {
 }
 
 #contribute li {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background: skyblue;
-  margin: 3%;
+  font-family: 'Courier New', Courier, monospace;
+  background: rgba(147, 162, 168, 0.262);
+  margin: 5px;
+  padding: 15px;
+  font-size: 1rem;
+}
+
+#contribute li:nth-of-type(n)::before {
+  content: "n";
+  background-color: #000000;
+
+}
+
+.page-footer {
+  background-color: #cbbfbf;
+
+}
+
+.page-footer ul {
+  justify-content: center;
+}
+
+.page-footer li {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.page-footer svg {
+  width: 1rem;
 }
