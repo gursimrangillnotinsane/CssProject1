@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lobster&display=swap');
+
 :root {
   --color-background: #91e39f;
   --color-text: #000000;
@@ -65,23 +67,18 @@ header p {
 
 
 header .link-github {
-  background-color: #cfe5e0;
+  background-color: #cfe5e04e;
   font-size: 2rem;
 }
 
 h1 {
   padding: 10%;
   /* text-align: start; */
-  color: #005645;
-  font-family: "Source Serif 4", serif;
-  font-size: 9rem;
-  font-weight: 700;
-}
-
-
-article {
-  margin: 30px;
-
+  color: #46566d;
+  font-family: "Lobster", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 9em;
+  font-weight: 500;
 }
 
 
@@ -90,13 +87,13 @@ h2 {
   font-weight: 600;
   margin: 3% 0;
   /* font-family: ; */
-  color: #ee1c25;
+  color: #795556;
   /* #bb0602 */
 }
 
 h3 {
   font-size: 2rem;
-  margin-top: 2%;
+  margin: 2%;
   color: #005645;
   font-family: "Source Serif 4", serif;
   font-weight: 600;
@@ -132,6 +129,7 @@ ul {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin: 3% 0;
 }
 
 ul li {
@@ -150,7 +148,6 @@ ul li img {
 }
 
 
-nav ul li::before {}
 
 nav ul li:hover {
   animation-name: hover_li;
@@ -211,15 +208,17 @@ ol li {
   padding: 2%;
 }
 
-#files {
-  width: 40%;
+section.container,
+#styles,
+#files,
+footer .container,
+.profile,
+nav {
+  margin: 3% auto 0;
+  max-width: 60rem;
 }
 
-.profile {
-  position: relative;
-  float: right;
-  bottom: 83px;
-}
+
 
 #profile-title {
   font-size: 1.5rem;
@@ -228,25 +227,36 @@ ol li {
 }
 
 
-.profile ul {
-  display: block;
-
-}
 
 .profile ul li {
   font-size: 1.3rem;
 }
 
-main li {
+.profile ul li span:first-child {
+  color: #644141;
+}
+
+
+
+
+main #about ul {
+  column-gap: 15px;
+  row-gap: 10px;
+  justify-content: center;
+}
+
+
+
+main ul li {
+  margin: 0;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 20px;
+  font-size: 15px;
   background-color: #bc955b;
   font-weight: 600;
 }
 
-
-.container {
-  margin: 20px;
+#contribute ol {
+  list-style-type: decimal;
 }
 
 #contribute li {
@@ -257,10 +267,22 @@ main li {
   font-size: 1rem;
 }
 
-#contribute li:nth-of-type(n)::before {
-  content: "n";
-  background-color: #000000;
 
+
+#profile-title~a,
+.link-allstyles {
+  margin-top: 4%;
+  padding: 0 35%;
+  font-size: 1.8rem;
+}
+
+#styles span span {
+  font-size: 1rem;
+}
+
+
+footer .container {
+  margin-top: 3%;
 }
 
 .page-footer {
@@ -268,9 +290,7 @@ main li {
 
 }
 
-.page-footer ul {
-  justify-content: center;
-}
+
 
 .page-footer li {
   margin: 0;
@@ -279,4 +299,13 @@ main li {
 
 .page-footer svg {
   width: 1rem;
+}
+
+.page-footer p {
+  margin: 1%;
+}
+
+#files a {
+  margin: 5%;
+  font-size: 1.5rem;
 }
