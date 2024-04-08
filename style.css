@@ -1,15 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+/* font for body text */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
-
+/* font for h1 */
+@import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
+/* font for headings */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lobster&display=swap');
-
-:root {
-  --color-background: #91e39f;
-  --color-text: #000000;
-  --color-text-secondary: rgb(36, 119, 72);
-  --color-light: #fff;
-  --color-anchor: #3a00ff;
-}
 
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
@@ -26,7 +20,9 @@
 
 /* setting default */
 html {
-  font-size: 100%;
+  font: 100%;
+  scroll-behavior: smooth;
+  scrollbar-color: #8874747b #e9e9e5;
 }
 
 body {
@@ -34,10 +30,10 @@ body {
 }
 
 
-
+/* the background image */
 body::before {
   content: "";
-  /* https://www.toptal.com/designers/subtlepatterns/uploads/leaves.png */
+  /*  taken from https://www.toptal.com/designers/subtlepatterns/uploads/leaves.png */
   background-image: url("wallpaperflare.com_wallpaper\ \(6\).jpg");
   position: absolute;
   width: 100%;
@@ -47,14 +43,28 @@ body::before {
   z-index: -1;
 }
 
+h1,
+.profile ul li span:first-child {
+  font-family: "Ultra", serif;
+}
+
 h2 {
   font-size: 3em;
-  font-weight: 600;
-  margin: 3% 0;
+  font-family: "Lobster", sans-serif;
   color: #795556;
 }
 
-p {
+/* setting fonts */
+#files a,
+h3,
+h4 {
+  font-family: "Lobster", sans-serif;
+
+}
+
+p,
+li,
+span {
   margin-top: 2%;
   line-height: 1.5rem;
   font-family: "Roboto Slab", serif;
@@ -76,6 +86,7 @@ a:hover {
   color: #016420
 }
 
+/* settign the skip link */
 .skip-link {
   position: absolute;
   top: 0;
@@ -97,17 +108,15 @@ a:hover {
 blockquote {
   padding: 1.3%;
   margin-top: 2%;
-
-  background-color: #a8656f;
+  background-color: #a988b44d;
 }
 
 blockquote p {
   margin: 0;
-  color: white;
 }
 
 blockquote a {
-  color: rgb(91, 25, 96);
+  color: rgba(90, 133, 120, 0.477);
 }
 
 ol li {
@@ -120,56 +129,7 @@ ul {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: 3% 0;
 }
-
-ul li {
-
-  margin: .3%;
-  padding: 1%;
-  font-size: 1.5em;
-
-}
-
-ul li img {
-  max-width: 100%;
-  /* Make images responsive within list items */
-  height: auto;
-  /* Maintain aspect ratio */
-}
-
-
-
-nav ul li:hover {
-  animation-name: hover_li;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-}
-
-@keyframes hover_li {
-  from {
-    background-color: white;
-  }
-
-  to {
-    background-color: #26ff00;
-  }
-}
-
-
-
-
-
-main article .container h3 {
-  font-size: 2rem;
-  margin: 2%;
-  color: #005645;
-  font-family: "Source Serif 4", serif;
-  font-weight: 600;
-}
-
-
-
 
 
 
@@ -184,7 +144,6 @@ header h1 {
   padding: 10%;
   /* text-align: start; */
   color: #46566d;
-  font-family: "Lobster", sans-serif;
   font-optical-sizing: auto;
   font-size: 9em;
   font-weight: 500;
@@ -197,7 +156,6 @@ header p {
 
 
 header .link-github {
-  background-color: #cfe5e04e;
   font-size: 2rem;
 }
 
@@ -206,9 +164,31 @@ header svg {
   width: 1.5rem;
 }
 
+/* nav  section*/
+nav ul li {
+  margin: .3%;
+  padding: 1%;
+  font-size: 1.2em;
+}
+
+nav ul li:hover {
+  animation-name: hover_li;
+  animation-duration: 1s;
+}
+
+@keyframes hover_li {
+  from {
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  to {
+    background-color: #688f6129;
+  }
+}
 
 
-/* main */
+
+/* main  section */
 
 main section.container,
 #styles,
@@ -218,13 +198,39 @@ nav {
   max-width: 86%;
 }
 
+/* nav */
+nav {
+  margin: 0 auto 0;
+}
+
+main ul li {
+  margin: .3%;
+  padding: 1%;
+  font-size: 1.5em;
+}
+
+main article .container h3 {
+  font-size: 2rem;
+  margin: 2%;
+  color: #005645;
+  font-weight: 600;
+}
+
 main #about ul {
   column-gap: 15px;
   row-gap: 10px;
   justify-content: center;
 }
 
-
+/* the text gif is taken from  https://i.pinimg.com/originals/e0/96/a0/e096a00fb0a55cf0f8bc0ef69db0b59b.gif */
+main #guidelines h3 {
+  background-image: url("https://i.pinimg.com/originals/e0/96/a0/e096a00fb0a55cf0f8bc0ef69db0b59b.gif");
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  background-size: cover;
+  margin: 0;
+}
 
 main ul li {
   margin: 0;
@@ -241,7 +247,7 @@ main ul li {
 
 #contribute li {
   font-family: 'Courier New', Courier, monospace;
-  background: rgba(147, 162, 168, 0.262);
+  background: #93a2a843;
   margin: 5px;
   padding: 15px;
   font-size: 1rem;
@@ -257,13 +263,13 @@ main ul li {
 #files a {
   margin: 10px;
   padding: 15px;
-  font-size: 1.5rem;
+  border-radius: 10px;
+  font-size: 1.3rem;
   width: 50%;
   text-align: center;
-  background-image: linear-gradient(rgb(204, 171, 171), rgb(225, 210, 176));
+  background-image: linear-gradient(#93a2a843, #a091ac94);
   background-attachment: fixed;
-  font-family: "Lobster", sans-serif;
-  font-weight: normal;
+  font-weight: 100;
   display: inherit;
 }
 
@@ -272,8 +278,11 @@ main ul li {
 /* aside one */
 .profile {
   float: right;
-  width: 40%;
-  margin-bottom: 10%;
+  width: 30%;
+  margin-right: 7%;
+  padding: 3%;
+  background-image: linear-gradient(#93a2a843, #a091ac94);
+  border-radius: 10px;
 }
 
 .profile h4 {
@@ -285,47 +294,70 @@ main ul li {
 .profile ul {
   flex-direction: column;
   justify-content: flex-start;
-}
+  margin-bottom: 5px;
 
-
-.profile ul li {
-  font-size: 1.3rem;
 }
 
 .profile ul li span:first-child {
-  color: #644141;
+  font-weight: 100;
 }
 
 #profile-title~a,
 .link-allstyles {
-  margin-top: 4%;
-  padding: 0 35%;
+  margin: 0.3%;
+  padding: 1%;
   font-size: 1.8rem;
+  font-family: "Lobster";
 }
 
 /* aside second */
 #styles {
-  margin-top: 25%;
+  display: inline-block;
+}
+
+#styles .container {
+  display: inherit;
+  margin-left: 17%;
+}
+
+#styles h2 {
+  margin-bottom: 2%;
+
+}
+
+#styles ul {
+  margin: 3%;
+  justify-content: space-between;
+  width: 25rem;
+  flex-direction: column;
+
 }
 
 #styles ul li {
-  background-image: linear-gradient(rgb(204, 171, 171), rgb(225, 210, 176));
+  background-image: linear-gradient(#93a2a843, #776c8094);
   background-attachment: fixed;
+  padding: 3%;
+  border-radius: 10px;
 }
+
 
 #styles span span {
   font-size: 1rem;
+}
+
+#styles .link-allstyles {
+  padding-left: 3%;
+
 }
 
 
 /* footer */
 
 .page-footer {
-  background-color: #cbbfbf;
+  margin-top: 2%;
+  background-color: #776c803a;
 
 }
-
-
 
 .page-footer li {
   margin: 0;
@@ -336,8 +368,10 @@ main ul li {
   width: 1rem;
 }
 
+
 .page-footer p {
-  margin: 1%;
+  padding-top: 1%;
+  margin: 0 6%;
 }
 
 
@@ -346,6 +380,30 @@ main ul li {
 
   html {
     font-size: 90%;
+  }
+
+  body::before {
+    background-position: 57rem;
+    height: 90%;
+  }
+
+  header {
+    margin-right: 20%;
+    text-align: start;
+    height: 67vh;
+    padding-top: 50%;
+
+  }
+
+  header .container {
+    padding: 23% 10% 0 10%;
+
+  }
+
+  header h1 {
+    font-size: 4em;
+    padding: 0;
+    padding-bottom: 10%;
   }
 
   h2 {
@@ -358,6 +416,27 @@ main ul li {
   }
 
   nav a {
-    font-size: 14px;
+    font-size: 12px;
+  }
+
+  .profile h4 {
+    font-weight: 200;
+    font-size: 1.7rem;
+  }
+
+  #files {
+    width: 40%;
+  }
+
+  .profile {
+    width: 37%;
+  }
+
+  #styles ul {
+    width: 20rem;
+  }
+
+  footer a {
+    font-size: 1rem;
   }
 }
