@@ -51,7 +51,7 @@ h1,
 h2 {
   font-size: 3em;
   font-family: "Lobster", sans-serif;
-  color: #795556;
+  color: #8f1111;
 }
 
 /* setting fonts */
@@ -62,11 +62,12 @@ h4 {
 
 }
 
+
 p,
 li,
 span {
   margin-top: 2%;
-  line-height: 1.5rem;
+  line-height: 2rem;
   font-family: "Roboto Slab", serif;
 }
 
@@ -79,6 +80,7 @@ a {
   text-decoration: none;
   color: #005645;
   font-weight: 600;
+  display: inline-block;
 }
 
 a:hover {
@@ -142,11 +144,41 @@ header {
 
 header h1 {
   padding: 10%;
-  /* text-align: start; */
-  color: #46566d;
+  color: #19929d;
   font-optical-sizing: auto;
   font-size: 9em;
   font-weight: 500;
+  text-shadow: -5px 6px 0px #4e5956;
+}
+
+header h1:hover {
+  animation: glow 0.5s forwards ease-in-out;
+}
+
+header h1:not(:hover) {
+  animation: unglow 0.5s forwards ease-out;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: -5px 6px 0px #4e5956;
+  }
+
+  100% {
+    text-shadow: -20px 20px 0px #4e5956;
+  }
+
+}
+
+@keyframes unglow {
+  0% {
+    text-shadow: -20px 20px 0px #4e5956;
+  }
+
+  100% {
+    text-shadow: -5px 6px 0px #4e5956;
+  }
+
 }
 
 
@@ -194,7 +226,7 @@ main section.container,
 #styles,
 .profile,
 nav {
-  margin: 3% auto 0;
+  margin: 5% auto 0;
   max-width: 86%;
 }
 
@@ -229,7 +261,7 @@ main #guidelines h3 {
   -webkit-text-fill-color: transparent;
   display: inline-block;
   background-size: cover;
-  margin: 0;
+  margin: 1%;
 }
 
 main ul li {
@@ -289,6 +321,7 @@ main ul li {
   font-size: 2rem;
   margin: 2%;
   font-weight: 600;
+  color: #005645;
 }
 
 .profile ul {
@@ -330,6 +363,7 @@ main ul li {
   justify-content: space-between;
   width: 25rem;
   flex-direction: column;
+  text-align: center;
 
 }
 
@@ -357,6 +391,10 @@ main ul li {
   margin-top: 2%;
   background-color: #776c803a;
 
+}
+
+.page-footer ul {
+  margin: 2% 0 1% 0;
 }
 
 .page-footer li {
@@ -420,21 +458,27 @@ main ul li {
     font-size: 12px;
   }
 
-  .profile h4 {
-    font-weight: 200;
-    font-size: 1.7rem;
-  }
 
   #files {
-    width: 40%;
+    width: 85%;
+    float: none;
+
   }
 
   .profile {
-    width: 37%;
+    width: 80%;
+    float: none;
+    margin: 10% 0 5% 8%;
+  }
+
+  .profile h4 {
+    font-weight: 200;
+    font-size: 1.7rem;
+
   }
 
   #styles .container {
-    margin-left: 8%;
+    margin: 5% 0 10% 8%;
   }
 
   #styles ul {
