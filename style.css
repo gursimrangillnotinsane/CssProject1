@@ -304,6 +304,15 @@ main ul li {
 }
 
 /* aside second */
+#styles {
+  margin-top: 25%;
+}
+
+#styles ul li {
+  background-image: linear-gradient(rgb(204, 171, 171), rgb(225, 210, 176));
+  background-attachment: fixed;
+}
+
 #styles span span {
   font-size: 1rem;
 }
