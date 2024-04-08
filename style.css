@@ -24,19 +24,16 @@
   }
 }
 
+/* setting default */
 html {
   font-size: 100%;
 }
 
 body {
-  background-color: #d1d1cc;
+  background-color: #e9e9e5;
 }
 
-p,
-h2,
-li {
-  color: black;
-}
+
 
 body::before {
   content: "";
@@ -50,53 +47,11 @@ body::before {
   z-index: -1;
 }
 
-nav {
-  margin-top: 3px;
-}
-
-
-header {
-  height: 100vh;
-  text-align: center;
-  margin-right: 40%;
-}
-
-header p {
-  margin-bottom: 3%;
-}
-
-
-header .link-github {
-  background-color: #cfe5e04e;
-  font-size: 2rem;
-}
-
-h1 {
-  padding: 10%;
-  /* text-align: start; */
-  color: #46566d;
-  font-family: "Lobster", sans-serif;
-  font-optical-sizing: auto;
-  font-size: 9em;
-  font-weight: 500;
-}
-
-
 h2 {
   font-size: 3em;
   font-weight: 600;
   margin: 3% 0;
-  /* font-family: ; */
   color: #795556;
-  /* #bb0602 */
-}
-
-h3 {
-  font-size: 2rem;
-  margin: 2%;
-  color: #005645;
-  font-family: "Source Serif 4", serif;
-  font-weight: 600;
 }
 
 p {
@@ -107,10 +62,6 @@ p {
 
 strong {
   font-weight: 800;
-}
-
-header svg {
-  width: 1.5rem;
 }
 
 
@@ -124,6 +75,46 @@ a:hover {
   text-decoration: underline;
   color: #016420
 }
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: -10000px;
+  font-size: 14px;
+  width: 1px;
+  height: 1px;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  padding: 0.3rem;
+}
+
+blockquote {
+  padding: 1.3%;
+  margin-top: 2%;
+
+  background-color: #a8656f;
+}
+
+blockquote p {
+  margin: 0;
+  color: white;
+}
+
+blockquote a {
+  color: rgb(91, 25, 96);
+}
+
+ol li {
+  background-color: antiquewhite;
+  padding: 2%;
+}
+
 
 ul {
   display: flex;
@@ -169,75 +160,63 @@ nav ul li:hover {
 
 
 
-.skip-link {
-  position: absolute;
-  top: 0;
-  left: -10000px;
-  font-size: 14px;
-  width: 1px;
-  height: 1px;
-}
-
-.skip-link:focus {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: auto;
-  height: auto;
-  padding: 0.3rem;
-}
-
-blockquote {
-  padding: 1.3%;
-  margin-top: 2%;
-
-  background-color: #a8656f;
-}
-
-blockquote p {
-  margin: 0;
-  color: white;
-}
-
-blockquote a {
-  color: rgb(91, 25, 96);
-}
-
-ol li {
-  background-color: antiquewhite;
-  padding: 2%;
-}
-
-section.container,
-#styles,
-#files,
-footer .container,
-.profile,
-nav {
-  margin: 3% auto 0;
-  max-width: 60rem;
-}
-
-
-
-#profile-title {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+main article .container h3 {
+  font-size: 2rem;
+  margin: 2%;
+  color: #005645;
+  font-family: "Source Serif 4", serif;
   font-weight: 600;
 }
 
 
 
-.profile ul li {
-  font-size: 1.3rem;
+
+
+
+/* header */
+header {
+  height: 100vh;
+  text-align: center;
+  margin-right: 40%;
 }
 
-.profile ul li span:first-child {
-  color: #644141;
+header h1 {
+  padding: 10%;
+  /* text-align: start; */
+  color: #46566d;
+  font-family: "Lobster", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 9em;
+  font-weight: 500;
+}
+
+
+header p {
+  margin-bottom: 3%;
+}
+
+
+header .link-github {
+  background-color: #cfe5e04e;
+  font-size: 2rem;
+}
+
+
+header svg {
+  width: 1.5rem;
 }
 
 
 
+/* main */
+
+main section.container,
+#styles,
+.profile,
+nav {
+  margin: 3% auto 0;
+  max-width: 86%;
+}
 
 main #about ul {
   column-gap: 15px;
@@ -255,6 +234,7 @@ main ul li {
   font-weight: 600;
 }
 
+
 #contribute ol {
   list-style-type: decimal;
 }
@@ -268,6 +248,53 @@ main ul li {
 }
 
 
+#files {
+  margin: 3% 0 0 6%;
+  width: 50%;
+  float: left;
+}
+
+#files a {
+  margin: 10px;
+  padding: 15px;
+  font-size: 1.5rem;
+  width: 50%;
+  text-align: center;
+  background-image: linear-gradient(rgb(204, 171, 171), rgb(225, 210, 176));
+  background-attachment: fixed;
+  font-family: "Lobster", sans-serif;
+  font-weight: normal;
+  display: inherit;
+}
+
+
+
+/* aside one */
+.profile {
+  float: right;
+  width: 40%;
+  margin-bottom: 10%;
+}
+
+.profile h4 {
+  font-size: 2rem;
+  margin: 2%;
+  font-weight: 600;
+}
+
+.profile ul {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+.profile ul li {
+  font-size: 1.3rem;
+}
+
+.profile ul li span:first-child {
+  color: #644141;
+}
 
 #profile-title~a,
 .link-allstyles {
@@ -276,14 +303,13 @@ main ul li {
   font-size: 1.8rem;
 }
 
+/* aside second */
 #styles span span {
   font-size: 1rem;
 }
 
 
-footer .container {
-  margin-top: 3%;
-}
+/* footer */
 
 .page-footer {
   background-color: #cbbfbf;
@@ -305,7 +331,24 @@ footer .container {
   margin: 1%;
 }
 
-#files a {
-  margin: 5%;
-  font-size: 1.5rem;
+
+/* /screen queries */
+@media screen and (max-width:900px) {
+
+  html {
+    font-size: 90%;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    justify-content: space-between;
+    column-gap: 1px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
 }
