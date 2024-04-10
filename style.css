@@ -565,7 +565,7 @@ main ul li {
 
   body::before {
     background-position: 67%;
-    height: 95%;
+    height: 95vh;
   }
 
   header {
