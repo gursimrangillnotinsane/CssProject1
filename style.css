@@ -51,6 +51,7 @@ h1,
 h2 {
   font-size: 3em;
   font-family: "Lobster", sans-serif;
+  margin-bottom: 20px;
   color: #8f1111;
 }
 
@@ -66,7 +67,7 @@ h4 {
 p,
 li,
 span {
-  margin-top: 2%;
+  margin: 10px 0;
   line-height: 2rem;
   font-family: "Roboto Slab", serif;
 }
@@ -85,7 +86,8 @@ a {
 
 a:hover {
   text-decoration: underline;
-  color: #016420
+  color: #016420;
+
 }
 
 /* settign the skip link */
@@ -201,22 +203,18 @@ nav ul li {
   margin: .3%;
   padding: 1%;
   font-size: 1.2em;
+
 }
 
-nav ul li:hover {
-  animation-name: hover_li;
-  animation-duration: 1s;
+nav ul li a {
+  transition: .25s ease-in-out;
+  border: 10px;
 }
 
-@keyframes hover_li {
-  from {
-    background-color: rgba(255, 255, 255, 0);
-  }
-
-  to {
-    background-color: #688f6129;
-  }
+nav ul li a:hover {
+  color: rgb(41, 78, 17);
 }
+
 
 
 
@@ -226,14 +224,19 @@ main section.container,
 #styles,
 .profile,
 nav {
-  margin: 5% auto 0;
+  margin: 2rem auto 0;
   max-width: 86%;
+  border-bottom: 2px solid #473e142b;
+  padding: 0 1rem 2rem;
 }
 
 /* nav */
 nav {
-  margin: 0 auto 0;
+  margin: 1% auto 0;
+  border-bottom: 2px solid #473e142b;
+  padding: 10px;
 }
+
 
 main ul li {
   margin: .3%;
@@ -243,7 +246,7 @@ main ul li {
 
 main article .container h3 {
   font-size: 2rem;
-  margin: 2%;
+  margin-bottom: 2%;
   color: #005645;
   font-weight: 600;
 }
@@ -272,6 +275,14 @@ main ul li {
   font-weight: 600;
 }
 
+#contribute section:first-child {
+  border: none;
+  padding: 20px;
+}
+
+#contribute section:last-of-type {
+  margin-top: 2rem;
+}
 
 #contribute ol {
   list-style-type: decimal;
@@ -287,7 +298,7 @@ main ul li {
 
 
 #files {
-  margin: 3% 0 0 6%;
+  margin: 6% 0 0 6%;
   width: 50%;
   float: left;
 }
@@ -311,7 +322,7 @@ main ul li {
 .profile {
   float: right;
   width: 30%;
-  margin-right: 7%;
+  margin: 6% 7% 0 0;
   padding: 3%;
   background-image: linear-gradient(#93a2a843, #a091ac94);
   border-radius: 10px;
@@ -346,6 +357,7 @@ main ul li {
 /* aside second */
 #styles {
   display: inline-block;
+  border: none;
 }
 
 #styles .container {
@@ -353,10 +365,7 @@ main ul li {
   margin-left: 17%;
 }
 
-#styles h2 {
-  margin-bottom: 2%;
 
-}
 
 #styles ul {
   margin: 3%;
@@ -393,10 +402,6 @@ main ul li {
 
 }
 
-.page-footer ul {
-  margin: 2% 0 1% 0;
-}
-
 .page-footer li {
   margin: 0;
   font-size: 1.2rem;
@@ -408,8 +413,11 @@ main ul li {
 
 
 .page-footer p {
-  padding-top: 1%;
-  margin: 0 6%;
+  margin: 15px 6%;
+}
+
+.page-footer p:last-of-type {
+  margin-bottom: 0;
 }
 
 
@@ -446,12 +454,16 @@ main ul li {
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   nav ul {
     justify-content: space-between;
     column-gap: 1px;
+  }
+
+  nav ul li {
+    padding: 0;
   }
 
   nav a {
@@ -475,6 +487,11 @@ main ul li {
     font-weight: 200;
     font-size: 1.7rem;
 
+  }
+
+  #styles {
+    margin: 0;
+    padding: 1rem;
   }
 
   #styles .container {
