@@ -565,11 +565,7 @@ main ul li {
 
   body::before {
     background-position: 67%;
-<<<<<<< HEAD
     height: 90vh;
-=======
-    height: 95vh;
->>>>>>> f87a551855bbb127eeb977a76cb36f3130da239a
   }
 
   header {
