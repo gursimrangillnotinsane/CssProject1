@@ -277,7 +277,14 @@ header {
   height: 100vh;
   text-align: center;
   margin-right: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
 }
+
+
 
 header h1 {
   padding: 10%;
@@ -569,14 +576,17 @@ main ul li {
   }
 
   header {
-    margin-right: 20%;
+    margin-right: 30%;
+    padding-left: 10%;
     text-align: start;
     height: 90vh;
   }
 
 
   header .container {
-    padding: 17rem 2rem 0;
+    /* padding: 17rem 2rem 0;
+     */
+    padding: 3 5% 4% 0;
   }
 
   header h1 {
