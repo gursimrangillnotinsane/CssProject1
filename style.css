@@ -562,8 +562,30 @@ main ul li {
 }
 
 
+@media screen and (max-height:680px) {
+
+
+  body::before {
+    background-position: 67%;
+    height: 90vh;
+  }
+
+  header {
+    margin-right: 30%;
+    padding-left: 10%;
+    text-align: start;
+    height: 90vh;
+  }
+
+  header h1 {
+    font-size: 5rem;
+    padding: 0;
+    padding-bottom: 10%;
+  }
+}
+
 /* /screen queries */
-@media screen and (max-width:900px) {
+@media screen and (max-width:1130px) {
 
   html {
     font-size: 90%;
@@ -586,7 +608,7 @@ main ul li {
   header h1 {
     font-size: 4em;
     padding: 0;
-    padding-bottom: 20%;
+    padding-bottom: 10%;
   }
 
   h2 {
